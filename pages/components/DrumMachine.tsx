@@ -1,20 +1,43 @@
-import { Col, Row } from 'antd'
-import React from 'react'
-import { DrumsWrapper } from '../../styles/styles'
-import Drum from './Drum'
+import "antd/dist/antd.css";
+import {  Row } from "antd";
+import React from "react";
+import { DrumsWrapper, Heading } from "../../styles/styles";
+import Drum from "./Drum";
+import AddDrum from "./AddDrum";
+import useSound from "use-sound";
+import { sounds } from "../../helpers/map";
 
-type Props = {}
+type Props = {};
+
+
+
+
 
 const DrumMachine = (props: Props) => {
-  return (
-    <DrumsWrapper>
-          <Row>
-            <Col >
-            <Drum/>
-            </Col>
-          </Row>
-    </DrumsWrapper>
-  )
-}
 
-export default DrumMachine
+
+  
+  return (
+    
+      <DrumsWrapper>
+      <Heading>Drum Machine</Heading>
+      <Row justify="center" wrap={true}>
+        <Drum initial={"q"}  />
+        <Drum  initial={"t"} />
+        <Drum  />
+        <Drum   />
+        <Drum   />
+        <Drum   />
+        <Drum   />
+        <Drum   />
+        <Drum   />
+        <Drum   />
+        <Drum   />
+        <Drum   />
+      </Row>
+    </DrumsWrapper>
+   
+  );
+};
+
+export default DrumMachine;
